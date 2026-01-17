@@ -11,7 +11,7 @@ function welcomeMessage() {
    document.getElementById("welcome-speech").innerText = `Welcome, ${userResponse} ! to Oreo Website!`
 }
 
-new Date().toLocaleString()
+const timestamp = new Date().toLocaleString();
 
 const form = document.getElementById("messageForm");
 const list = document.getElementById("messageList");
@@ -22,6 +22,7 @@ form.addEventListener("submit", function (e) {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
+  const timestamp = new Date().toLocaleString();
 
   // hapus teks "No messages yet"
   if (list.children[0]?.classList.contains("text-gray-400")) {
@@ -32,6 +33,7 @@ form.addEventListener("submit", function (e) {
   item.className = "border rounded p-3 bg-gray-50";
 
   item.innerHTML = `
+    <p class="text-right text-xs text-blue-500">${timestamp}</p>
     <p class="font-semibold">${name}</p>
     <p class="text-xs text-gray-500">${email}</p>
     <p class="mt-2">${message}</p>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oreo Website</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+
+    <!-- Header Content -->
+    <header class="main-header">
+        <!-- Logo -->
+        <div class="logo"></div>
+           
+        <!-- Navigation Menu -->
+        <nav class="flex">
+            <a class="border p-2 rounded" href="#home-page">Home</a>
+            <a class="border p-2 rounded" href="#portfolio-page">Portfolio</a>
+            <a class="border p-2 rounded" href="#our-profile-page">Our Profile</a>
+            <a class="border p-2 rounded" href="#message-us-page">Message Us</a>
+        </nav>
+    </header>
+
+    <hr />
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section id="home-page" class="min-h-[500px] text-center content-center">
+            <h2 class="text-2xl font-bold" id="welcome-speech">Welcome To Oreo Website</h2>
+            <p class="mt-2">We are glad to have you here. Explore our services and enjoy it.</p>
+        </section>
+
+        <hr />
+        <!-- Portfolio Page -->
+        <section id="portfolio-page" class="min-h-[500px] text-center content-center">
+            <h2 class="text-2xl font-bold">Our Portfolio</h2>
+            <p class="mt-8">Oreo website is designed to make it easy for you to top-up your favorite games</p>
+            <p class="text-sm font-bold">Quick, Safe, and Trusty</p>
+            
+            <!-- panel/pict testi -->
+            <div class="mt-6 flex justify-center">
+                <div class="flex items-center gap-4 min-w-0">
+
+                    <button id="prevBtn" class="p-2 rounded-full border hover:bg-gray-100 shrink-0 z-10">◀</button>
+
+                    <!-- VIEWPORT -->
+                    <div class="overflow-hidden w-[calc(4*288px+3*24px)]">
+                        <div
+                        id="logo-slider"
+                        class="flex gap-6 transition-transform duration-500"
+                        ></div>
+                    </div>
+
+                    <button id="nextBtn" class="p-2 rounded-full border hover:bg-gray-100 shrink-0">▶</button>
+                </div>
+            </div>
+
+        </section>
+
+        <hr />
+        <!-- Our Profile Page -->
+        <section id="our-profile-page" class="min-h-[500px] text-center content-center">
+            <h2 class="text-2xl font-bold">About Oreo Website</h2>
+            <p class="mt-2">Oreo Website is an online game top-up platform that provides fast, secure, and reliable services for purchasing diamonds, vouchers, and game items.</p>
+            <div class="mt-8 grid grid-cols-2 gap-4 text-sm">
+            <div>⚡ Instant process</div>
+            <div>🔒 Safe & Secure</div>
+            <div>💳 Many Payment Options</div>
+            <div>📞 Responsive Customer Support</div>
+        </section>
+
+        <hr />
+        <!-- Message Us Page -->
+        <section id="message-us-page" class="min-h-[500px] mx-8">
+            <header>
+                <h2 class="mt-2 text-2xl font-bold">Message Us</h2>
+                <p class="mt-2">Have questions, suggestions, or anything else?</p>
+                <br> 
+            </header>
+
+            <div class="grid grid-cols-1 grid-cols-2 gap-8">
+                <!-- Form Isi/submit -->
+                <form id="messageForm" class="border p-6 rounded-lg">
+                    <div class="mb-4">
+                        <label class="block mb-2" for="name">Name:</label>
+                        <input class="w-full p-2 border rounded" type="text" id="name" placeholder="Tulis nama Anda" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block mb-2" for="email">E-mail:</label>
+                        <input class="w-full p-2 border rounded" type="email" id="email" placeholder="abcd@abcd.com" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block mb-2" for="message">Message:</label>
+                        <textarea id="message" rows="5" class="w-full p-2 border rounded" required placeholder="Tulis pesan Anda"></textarea>
+                    </div>
+
+                    <button class="bg-gray-800 text-white px-3 py-1 rounded hover:bg-gray-800">Submit</button>
+                    
+                </form>
+
+                <!-- Form output -->
+                <div>
+                    <h3 class="font-semibold mb-4">Latest Message</h3>
+                    <div id="messageList" class="space-y-4 text-sm">
+                        <p class="text-gray-400">No messages yet.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- Footer Content -->
+    <footer>
+        <p class="text-center p-4 bg-blue-200">© 2026 | Oreo Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Javascript External -->
+    <script src="/js/script.js"></script>
+</body>
+</html>
